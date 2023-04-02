@@ -2,7 +2,6 @@
 import { List, ListItem, Button } from 'components/Contacts/Contacts.styled';
 
 export function Contacts({ contacts, onDeleteUser }) {
-  console.log(contacts);
   return (
     <List>
       {contacts.map(({ id, name, number }) => (
