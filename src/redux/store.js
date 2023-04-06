@@ -10,7 +10,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { contactsReducer } from './contactsSlice';
+import { contactReducer } from './contactSlice';
 
 const persistConfig = {
   key: 'root',
@@ -18,7 +18,7 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, contactsReducer);
+const persistedReducer = persistReducer(persistConfig, contactReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
